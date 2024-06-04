@@ -41,7 +41,7 @@ pipeline {
       when {
         anyOf {
           branch DEFAULT_BRANCH
-          expression { CHANGE_ID != null && CHANGE_AUTHOR != 'dependabot[bot]'}
+          expression { CHANGE_AUTHOR != 'dependabot[bot]'}
         }
       }
       steps {
