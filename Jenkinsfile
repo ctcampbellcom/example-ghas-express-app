@@ -38,12 +38,6 @@ pipeline {
 
   stages {
     stage('Run CodeQL analysis') {
-      when {
-        anyOf {
-          branch DEFAULT_BRANCH
-          expression { CHANGE_AUTHOR != 'dependabot[bot]'}
-        }
-      }
       steps {
         container('node-lts') {
           script {
