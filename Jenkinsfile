@@ -44,7 +44,7 @@ pipeline {
             sh '${CODEQL_DIR}/codeql database create ./codeql-db \
                 --ram ${CODEQL_MEMORY} \
                 --language ${CODEQL_LANGUAGE} \
-                --overwrite
+                --overwrite'
             sh '${CODEQL_DIR}/codeql database analyze ./codeql-db \
                 --ram ${CODEQL_MEMORY} \
                 --format=sarif-latest \
